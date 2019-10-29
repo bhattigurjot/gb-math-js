@@ -1,0 +1,34 @@
+{
+  "name": "gb-math-js",
+  "version": "1.0.0",
+  "description": "Javascript math library for games",
+  "main": "src/math.js",
+  "scripts": {
+    "build": "parcel build src/math.js --target node",
+    "test": "jest --watch"
+  },
+  "jest": {
+    "verbose": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bhattigurjot/gb-math-js.git"
+  },
+  "keywords": [
+    "javascript",
+    "math",
+    "games"
+  ],
+  "author": "Gurjot Bhatti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bhattigurjot/gb-math-js/issues"
+  },
+  "homepage": "https://github.com/bhattigurjot/gb-math-js#readme",
+  "devDependencies": {
+    "jest": "^24.9.0",
+    "nodemon": "^1.19.4",
+    "parcel-bundler": "^1.12.4"
+  },
+  "dependencies": {}
+}
