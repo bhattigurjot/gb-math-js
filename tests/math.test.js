@@ -42,7 +42,7 @@ test('Should return correct multiplication resultant vector (Vector by a Scalar)
     expect(v3).toMatchObject({x: 10, y: 10})
 
     let v4 = vec2d.mulScalar(v1, -6)
-    expect(v3).toMatchObject({x: -12, y: -12})
+    expect(v4).toMatchObject({x: -12, y: -12})
 })
 
 test('Should return correct division resultant vector (Vector by a Scalar)', () => {
@@ -57,7 +57,8 @@ test('Should return correct division resultant vector (Vector by a Scalar)', () 
     expect(v5).toMatchObject({x: -0.33333, y: -0.33333})
 
     //edge case - divide by zero
-    // let v6 = vec2d.divScalar(v1, 0)
-    // expect(v6).toMatchObject({x: Infinity, y: Infinity})
-    expect(vec2d.divScalar(v1, 0)).rejects.toThrowError(new Error("Cannot divide by zero"))
+    let v6 = () => {
+        vec2d.divScalar(v1, 0)
+    }
+    expect(v6).toThrow("Cannot divide by zero")
 })
