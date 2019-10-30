@@ -25,8 +25,18 @@ class vec2d {
             throw new Error("Cannot divide by zero")
         }
 
-        let x = parseFloat((_v1.x / _s).toFixed(5))
-        let y = parseFloat((_v1.y / _s).toFixed(5))
+        let x = (_v1.x / _s)
+        let y = (_v1.y / _s)
+        let x_decimal_digits = x.toString().split(".")[1].length
+        let y_decimal_digits = y.toString().split(".")[1].length
+
+        if(x_decimal_digits > 5 || y_decimal_digits > 5) {
+            x = parseFloat(x.toFixed(5))
+            y = parseFloat(y.toFixed(5))
+        }
+
+        // let x = parseFloat((_v1.x / _s).toFixed(5))
+        // let y = parseFloat((_v1.y / _s).toFixed(5))
         return new vec2d(x, y)
     }
 }
