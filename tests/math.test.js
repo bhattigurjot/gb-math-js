@@ -42,7 +42,7 @@ test('Should return correct multiplication resultant vector (Vector by a Scalar)
     expect(v3).toMatchObject({x: 10, y: 10})
 
     let v4 = vec2d.mulScalar(v1, -6)
-    expect(v3).toMatchObject({x: -12, y: -12})
+    expect(v4).toMatchObject({x: -12, y: -12})
 })
 
 test('Should return correct division resultant vector (Vector by a Scalar)', () => {
