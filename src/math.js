@@ -1,16 +1,16 @@
-const add = (a,b) => {
-    return a+b
-}
-
 class vec2d {
     constructor(_x=0, _y=0) {
-        this.x = _x;
-        this.y = _y;
+        this.x = _x
+        this.y = _y
     }
 
-    setX(_x) {
-        this.x = _x;
+    add(_v) {
+        return new vec2d(this.x + _v.x, this.y + _v.y)
+    }
+
+    static addVectors(_v1, _v2) {
+        return new vec2d(_v1.x + _v2.x, _v1.y + _v2.y)
     }
 }
 
-export { vec2d, add as default }
+export { vec2d }
