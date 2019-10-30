@@ -21,8 +21,12 @@ class vec2d {
     }
 
     static divScalar(_v1, _s) {
-        let x = (_v1.x / _s).toFixed(5)
-        let y = (_v1.y / _s).toFixed(5)
+        if(_s === 0) {
+            throw new Error("Cannot divide by zero")
+        }
+
+        let x = parseFloat((_v1.x / _s).toFixed(5))
+        let y = parseFloat((_v1.y / _s).toFixed(5))
         return new vec2d(x, y)
     }
 }
