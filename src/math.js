@@ -50,6 +50,11 @@ class vec2d {
         let s = (_v1.x * _v2.y) - (_v1.y * _v2.x)
         return s
     }
+    //TODO: handle errors and exceptions that can return NaN
+    static magnitude(_v1) {
+        let m = Math.sqrt((_v1.x * _v1.x) + (_v1.y * _v1.y))
+        return m
+    }
 }
 
 export { vec2d }

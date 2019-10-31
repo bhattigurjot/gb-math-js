@@ -78,3 +78,8 @@ test('Should return the Cross Product of two vectors', () => {
     let v_cross = vec2d.crossProduct(v1, v2)
     expect(v_cross).toBe(-7)
 })
+
+test('Should return the magnitude of a vector', () => {
+    let v_magnitude = vec2d.magnitude(v2)
+    expect(v_magnitude).toBe(5)
+})
