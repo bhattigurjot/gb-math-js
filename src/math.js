@@ -44,6 +44,12 @@ class vec2d {
         let s = (_v1.x * _v2.x) + (_v1.y * _v2.y)
         return s
     }
+
+    //cross product on 2-D vectors results in a scalar value, not a vector product.
+    static crossProduct(_v1, _v2) {
+        let s = (_v1.x * _v2.y) - (_v1.y * _v2.x)
+        return s
+    }
 }
 
 export { vec2d }
