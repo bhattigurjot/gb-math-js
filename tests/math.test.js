@@ -83,3 +83,8 @@ test('Should return the magnitude of a vector', () => {
     let v_magnitude = vec2d.magnitude(v2)
     expect(v_magnitude).toBe(5)
 })
+
+test('Should return the magnitude squared of a vector', () => {
+    let v_magnitude_squared = vec2d.magnitudeSquared(v2)
+    expect(v_magnitude_squared).toBe(25)
+})
